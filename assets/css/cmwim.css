@@ -433,3 +433,69 @@ img { max-width: 100%; display: block; }
   .hero-glow, .progress { animation: none; }
   .js [data-reveal] { filter: none; }
 }
+
+/* ============================================================= team ===== */
+
+.page-head { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 3vw, 2.5rem); border-bottom: 1px solid var(--line); }
+.page-head h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 18ch; }
+.page-head p { color: var(--ink-mid); max-width: 52ch; margin-top: .8rem; }
+
+.roster { padding-block: clamp(2rem, 4vw, 3rem); }
+.roster + .roster { padding-top: 0; }
+.roster-label { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.6rem; }
+.roster-label span { font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
+.roster-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.faces { display: flex; flex-wrap: wrap; gap: clamp(1.25rem, 3vw, 2.25rem); }
+.face {
+  appearance: none; background: none; border: 0; padding: 0; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: .7rem;
+  width: 7rem; font-family: inherit; color: inherit;
+}
+.face img {
+  width: 92px; height: 92px; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 0 0 4px var(--cream), 0 0 0 5.5px var(--line);
+  transition: box-shadow .28s var(--wm-ease), transform .28s var(--wm-ease);
+}
+.face:hover img { transform: scale(1.05); box-shadow: 0 0 0 4px var(--cream), 0 0 0 5.5px var(--red); }
+.face[aria-expanded="true"] img { box-shadow: 0 0 0 4px var(--cream), 0 0 0 6px var(--red); transform: scale(1.05); }
+.face b { font-weight: 500; font-size: .9rem; line-height: 1.25; text-align: center; }
+.face i { font-style: normal; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+
+.bio {
+  overflow: hidden; max-height: 0;
+  transition: max-height .5s var(--wm-ease), opacity .35s var(--wm-ease), margin .5s var(--wm-ease);
+  opacity: 0; margin-top: 0;
+}
+.bio.open { max-height: 30rem; opacity: 1; margin-top: 1.6rem; }
+.bio-in { display: flex; gap: 1.25rem; background: var(--cream-deep); border-left: 4px solid var(--red); padding: clamp(1.25rem, 3vw, 1.9rem); }
+.bio-in h3 { margin-bottom: .15em; font-size: clamp(1.25rem, 2.4vw, 1.6rem); }
+.bio-in .role { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+.bio-in p { color: var(--ink-mid); margin: .8rem 0 0; font-size: 1rem; }
+.bio-close {
+  appearance: none; background: none; border: 1px solid var(--line); color: var(--ink-mid);
+  font-family: inherit; font-size: .8rem; padding: .4rem .8rem; cursor: pointer; align-self: flex-start;
+}
+.bio-close:hover { border-color: var(--red); color: var(--red); }
+
+/* =========================================================== events ===== */
+
+.archive { display: grid; grid-template-columns: 15rem 1fr; gap: clamp(1.5rem, 4vw, 2.5rem); padding: clamp(1.5rem, 3vw, 2.25rem) 0; border-bottom: 1px solid var(--line); align-items: start; }
+.archive img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.archive h3 { margin-bottom: .2em; }
+.archive p { color: var(--ink-mid); font-size: .97rem; margin: 0; }
+.archive .meta { font-size: .76rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: .5rem; }
+@media (max-width: 720px) { .archive { grid-template-columns: 1fr; } }
+
+.initiative { border-top: 2px solid var(--red); padding-top: 1.2rem; }
+.initiative h3 { margin-bottom: .25em; }
+.initiative p { color: var(--ink-mid); font-size: .95rem; margin: 0; }
+
+/* ========================================================== contact ===== */
+
+.reach { display: flex; align-items: center; gap: 1.1rem; padding: 1.3rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: padding-left .25s var(--wm-ease); }
+.reach:hover { padding-left: .6rem; }
+.reach svg { flex: none; color: var(--red); }
+.reach b { display: block; font-size: 1.05rem; font-weight: 500; }
+.reach span { font-size: .92rem; color: var(--ink-soft); }
+.reach em { margin-left: auto; font-style: normal; color: var(--red); }

@@ -1,77 +1,93 @@
-# cmwim.org — CMWIM Network website
+# cmwim.org
 
-Static site for the **Canadian Muslim Women in Medicine Network**. Plain HTML and CSS,
-no build step, no dependencies. GitHub Pages serves the files exactly as they are in this repo.
+Static site for **CMWIM**, the Canadian Muslim Women in Medicine Network.
+Plain HTML and CSS, no build step. GitHub Pages serves these files as they are.
 
-## Structure
+## Pages
 
-```
-index.html          Home
-team.html           Our Team (co-founders + chapter leads)
-mentorship.html     Mentor + mentee sign-up
-cmwis.html          Canadian Muslim Women in Surgery
-contact.html        Contact
-404.html            Not-found page
-assets/css/style.css   All styling (design tokens at the top)
-assets/js/main.js      Mobile menu + scroll reveal
-assets/img/            Logo + favicon
-CNAME               Custom domain (cmwim.org)
-/home, /our-team, ... Redirect stubs so old Google Sites links keep working
-```
+| File | Purpose |
+|---|---|
+| `index.html` | Home |
+| `team.html` | Our team. Circular portraits, click to open a bio |
+| `events.html` | Events and initiatives |
+| `cmwis.html` | Canadian Muslim Women in Surgery |
+| `contact.html` | Contact |
+| `404.html` | Not found |
 
-## Editing content
+`assets/css/cmwim.css` holds all styling, with the palette as variables at the top.
+`assets/js/site.js` is progressive enhancement only: every page renders without it.
 
-Everything is plain HTML — open a file, change the words, commit. No tooling needed.
-GitHub's web editor (press `.` in the repo, or click the pencil icon on any file) works fine.
+The folders `home/`, `our-team/`, `mentor-sign-up/`, `mentee-sign-up/`,
+`contact-us/` and `canadian-muslim-women-in-surgery-cmwis/` are redirect stubs so
+links to the old Google Sites addresses keep working.
 
-**Adding a team member:** open `team.html`, copy an existing
-`<article class="card person">` block into the right chapter group, and edit it.
-Instructions are in an HTML comment at the top of that section.
+## Brand
 
-**Using real photos instead of initials:** put square images (300×300 or larger) in
-`assets/img/team/`, then replace
+Sampled from the logo:
 
-```html
-<span class="person-photo" aria-hidden="true">NQ</span>
-```
+| Token | Value |
+|---|---|
+| Cream | `#FEFAE7` |
+| Red | `#BD3232` |
+| Warm ink | `#3D1F1D` |
 
-with
+Change them once in the `:root` block of `assets/css/cmwim.css` and they apply everywhere.
 
-```html
-<img class="person-photo" src="assets/img/team/noor-qureshi.jpg" alt="" width="74" height="74">
-```
+### Typeface
 
-**Changing brand colours:** all colours live in the `:root` block at the top of
-`assets/css/style.css`. Change them once, they apply everywhere.
+The display face is **Kelin Eator** (ngene, sold on Creative Market). A desktop
+licence does not cover web embedding, so the site needs a **webfont licence** and
+the `.woff2` files. Until then it falls back to Bodoni Moda from Google Fonts,
+which shares the high contrast Didone character.
+
+To switch: drop the files in `assets/fonts/` and uncomment the `@font-face` block
+at the top of `assets/css/cmwim.css`. Nothing else changes.
+
+## Editing
+
+Everything is plain HTML. Open a file, change the words, commit. GitHub's web
+editor works fine: press `.` in the repo, or click the pencil on any file.
+
+**Adding a team member:** copy a `<button class="face">` block in `team.html` into
+the right chapter group and edit its `data-name`, `data-role`, `data-meta` and
+`data-bio` attributes. The bio panel reads those attributes, so there is nothing
+else to wire up.
+
+**Adding portraits:** square images, 400px or larger, in `assets/img/team/`,
+named `firstname_school.jpg`.
 
 ## Deploying
 
-Any push to `main` publishes automatically once Pages is enabled:
+Any push to `main` publishes once Pages is on:
 
-1. Repo → **Settings** → **Pages**
-2. **Source:** Deploy from a branch — **`main`** / **`/ (root)`**
-3. **Custom domain:** `cmwim.org` (the `CNAME` file in this repo sets this too)
-4. Tick **Enforce HTTPS** once the certificate is issued (can take up to an hour)
+1. Settings, then Pages
+2. Source: deploy from branch `main`, folder `/ (root)`
+3. Custom domain: `cmwim.org` (the `CNAME` file sets this too)
+4. Tick Enforce HTTPS once the certificate is issued
 
-## DNS for cmwim.org
+### DNS
 
-At the domain registrar, replace the current Google Sites records with:
+Replace the current Google Sites records at the registrar with:
 
-| Type  | Name | Value                  |
-|-------|------|------------------------|
-| A     | @    | 185.199.108.153        |
-| A     | @    | 185.199.109.153        |
-| A     | @    | 185.199.110.153        |
-| A     | @    | 185.199.111.153        |
-| CNAME | www  | cmwim.github.io.       |
+| Type | Name | Value |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | cmwim.github.io. |
 
-DNS changes take anywhere from a few minutes to 24 hours to take effect.
-Verify with `dig cmwim.org +noall +answer` before switching off the Google Site.
+Check with `dig cmwim.org +noall +answer` before switching off the Google Site.
 
 ## Still to do
 
-- [ ] Replace initials with real team photos
-- [ ] Add the official CMWIM logo (currently a placeholder mark in `assets/img/logo.svg`)
-- [ ] Add the **mentee** Google Form link — `mentorship.html` currently uses a `mailto:`
-      (search the file for `TODO`)
-- [ ] Add real dates to the events section on `index.html` when they're scheduled
+- [ ] Confirm the keynote speaker name and date on `events.html`, currently read off a projector slide in a photo
+- [ ] Add a destination for the mentee sign up. The mentor button points at the live Google Form; the mentee button goes to the contact page
+- [ ] Add remaining past events
+- [ ] Resolve the Kelin Eator webfont licence
+
+## Credits
+
+Motion mechanics (blur-in reveals, easing, scroll progress, crosshair frame)
+adapted from [Watermelon Platform](https://github.com/WatermelonCorp/watermelon-platform),
+MIT licensed. The notice is kept at the top of the ported block in `assets/css/cmwim.css`.

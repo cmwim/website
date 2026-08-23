@@ -144,10 +144,10 @@ img { max-width: 100%; display: block; }
 .hero h1 em { font-style: italic; color: var(--red); }
 .hero-lede { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--ink-mid); max-width: 42ch; margin-top: 1.4rem; }
 
-.arc { position: relative; height: 470px; }
+.arc { position: relative; height: 590px; }
 .arc-face {
-  position: absolute; width: clamp(96px, 9vw, 118px) !important; height: clamp(96px, 9vw, 118px) !important;
-  border-radius: 50%; object-fit: cover; object-position: 50% 32%;
+  position: absolute; width: clamp(104px, 9vw, 122px) !important; height: clamp(104px, 9vw, 122px) !important;
+  border-radius: 50%; object-fit: cover; object-position: 50% 38%;
   box-shadow: 0 0 0 4px var(--cream), 0 0 0 5.5px var(--line);
 }
 .js .arc-face { animation: rise .7s var(--ease) backwards; }
@@ -175,40 +175,23 @@ img { max-width: 100%; display: block; }
 }
 .band-red .kicker, .band-ink .kicker { color: var(--red-soft); }
 
-/* organizational partners */
+/* organizational partners — a continuous logo rail */
+.partners-section { overflow: hidden; border-top: 1px solid var(--line); }
 .partners-section h2 { margin-bottom: clamp(1.8rem, 4vw, 3rem); }
-.partners {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid rgba(254,250,231,.3);
-  border-bottom: 1px solid rgba(254,250,231,.3);
+.partner-marquee { overflow: hidden; border-block: 1px solid var(--line); }
+.partner-row { display: flex; width: max-content; animation: partner-scroll 28s linear infinite; }
+.partner-marquee:hover .partner-row { animation-play-state: paused; }
+.partner-logo {
+  width: clamp(15rem, 24vw, 20rem); min-height: 10rem; padding: 1.6rem 2rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .65rem;
+  color: var(--ink); text-align: center; text-decoration: none; border-right: 1px solid var(--line);
 }
-.partner {
-  min-height: 10.5rem; padding: 1.7rem 1.5rem;
-  display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem;
-  color: var(--cream); text-decoration: none;
-  border-right: 1px solid rgba(254,250,231,.3);
-}
-.partner:last-child { border-right: 0; }
-.partner strong {
-  font-family: var(--display); font-size: clamp(1.45rem, 2.4vw, 2rem);
-  font-weight: 400; line-height: 1.05;
-}
-.partner span { color: var(--red-soft); font-size: .88rem; line-height: 1.45; }
-a.partner { transition: background-color .2s var(--ease); }
-a.partner:hover { background: rgba(254,250,231,.07); color: var(--cream); }
-
-@media (max-width: 780px) {
-  .partners { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .partner:nth-child(2) { border-right: 0; }
-  .partner:nth-child(-n+2) { border-bottom: 1px solid rgba(254,250,231,.3); }
-}
-
-@media (max-width: 480px) {
-  .partners { grid-template-columns: 1fr; }
-  .partner { min-height: 8rem; border-right: 0; border-bottom: 1px solid rgba(254,250,231,.3); }
-  .partner:nth-child(3) { border-bottom: 1px solid rgba(254,250,231,.3); }
-  .partner:last-child { border-bottom: 0; }
-}
+.partner-logo strong { font-family: var(--body); font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1; letter-spacing: -.04em; }
+.partner-logo strong i { display: block; margin-top: .45rem; font-size: .35em; font-style: normal; letter-spacing: .45em; text-transform: uppercase; }
+.partner-logo span { max-width: 24ch; color: var(--ink-soft); font-size: .76rem; line-height: 1.35; text-transform: uppercase; letter-spacing: .08em; }
+.partner-pending { opacity: .64; }
+a.partner-logo:hover { color: var(--red); }
+@keyframes partner-scroll { to { transform: translateX(-50%); } }
 
 /* pull quote — replaces the "who we are" card */
 .quote { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -489,10 +472,12 @@ a.partner:hover { background: rgba(254,250,231,.07); color: var(--cream); }
   width: 9rem; font-family: inherit; color: inherit;
 }
 .face img {
-  width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: 50% 32%;
+  width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: 50% 38%;
   box-shadow: 0 0 0 4px var(--cream), 0 0 0 5.5px var(--line);
   transition: box-shadow .28s var(--wm-ease), transform .28s var(--wm-ease);
 }
+.face img[src*="amena_calgary"], .arc-face[src*="amena_calgary"] { object-position: 50% 32%; }
+.face img[src*="taifa_western"], .arc-face[src*="taifa_western"] { object-position: 50% 25%; }
 .face:hover img { transform: scale(1.05); box-shadow: 0 0 0 4px var(--cream), 0 0 0 5.5px var(--red); }
 .face[aria-expanded="true"] img { box-shadow: 0 0 0 4px var(--cream), 0 0 0 6px var(--red); transform: scale(1.05); }
 .face b { font-weight: 500; font-size: .9rem; line-height: 1.25; text-align: center; }
@@ -521,6 +506,8 @@ a.partner:hover { background: rgba(254,250,231,.07); color: var(--cream); }
 .archive h3 { margin-bottom: .2em; }
 .archive p { color: var(--ink-mid); font-size: .97rem; margin: 0; }
 .archive .meta { font-size: .76rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: .5rem; }
+.archive-text { grid-template-columns: 1fr; padding-left: clamp(0rem, 3vw, 2.5rem); }
+.archive-text > div { max-width: 58rem; }
 @media (max-width: 720px) { .archive { grid-template-columns: 1fr; } }
 
 .initiative { border-top: 2px solid var(--red); padding-top: 1.2rem; }

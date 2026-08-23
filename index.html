@@ -3,276 +3,224 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CMWIM Network — Canadian Muslim Women in Medicine</title>
-<meta name="description" content="A national mentorship network connecting Muslim women physicians and medical students across Canada. Empower, connect, lead.">
+<title>CMWIM | Canadian Muslim Women in Medicine</title>
+<meta name="description" content="Muslim women physicians and medical students from across Canada, empowering one another through a national mentorship program.">
 <link rel="canonical" href="https://cmwim.org/">
-<meta property="og:site_name" content="CMWIM Network">
-<meta property="og:title" content="CMWIM Network — Canadian Muslim Women in Medicine">
-<meta property="og:description" content="A national mentorship network connecting Muslim women physicians and medical students across Canada. Empower, connect, lead.">
+<meta property="og:title" content="CMWIM | Canadian Muslim Women in Medicine">
+<meta property="og:description" content="A national community of Muslim women across Canadian medicine.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://cmwim.org/">
-<meta name="theme-color" content="#0e4a45">
+<meta name="theme-color" content="#BD3232">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js";</script>
+<link rel="stylesheet" href="assets/css/cmwim.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
-<header class="site-header">
-  <div class="wrap header-inner">
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="wrap head-in">
     <a class="brand" href="index.html">
-      <img src="assets/img/logo.svg" alt="" width="40" height="40">
-      <span class="brand-text">
-        <span class="brand-name">CMWIM</span>
-        <span class="brand-sub">Network</span>
-      </span>
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M24 4.5a13 13 0 1 0 0 23 15 15 0 1 1 0-23Z" fill="#BD3232"/></svg>
+      <b>CMWIM</b>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav" id="primary-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="team.html">Our Team</a>
-      <a href="mentorship.html">Mentorship</a>
+      <a href="#what">What we do</a>
+      <a href="team.html">Our team</a>
+      <a href="events.html">Events</a>
       <a href="cmwis.html">CMWiS</a>
       <a href="contact.html">Contact</a>
-      <a class="btn btn--primary btn--sm" href="mentorship.html">Join the network</a>
+      <a class="act" href="#join">Join us</a>
     </nav>
   </div>
 </header>
+
 <main id="main">
-<section class="hero">
-  <div class="wrap">
-    <p class="hero-tagline"><span>Empower</span><span>Connect</span><span>Lead</span></p>
-    <h1>Canadian Muslim Women in Medicine</h1>
-    <p class="lede">A national mentorship network where Muslim women physicians and medical students come together to support one another through every stage of the journey &mdash; rooted in community, collaboration, and growth.</p>
-    <div class="btn-row">
-      <a class="btn btn--gold" href="mentorship.html#mentee">Become a mentee
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-      </a>
-      <a class="btn btn--ghost" href="mentorship.html#mentor">Become a mentor</a>
-    </div>
-    <dl class="hero-stats">
-      <div><dt>7</dt><dd>University chapters</dd></div>
-      <div><dt>15+</dt><dd>Student leaders</dd></div>
-      <div><dt>1</dt><dd>National community</dd></div>
-    </dl>
-  </div>
-</section>
 
-<section class="section section--paper" id="who-we-are">
-  <div class="wrap">
-    <div class="grid grid--2" style="align-items:center; gap:clamp(2rem,5vw,4rem)">
-      <div class="reveal">
-        <p class="eyebrow">Who we are</p>
-        <h2>A community that understands your journey</h2>
-        <p class="prose">The CMWIM Network brings together Muslim women physicians and medical students from across Canada to empower one another through a national mentorship program rooted in community, collaboration, and growth.</p>
-        <p class="prose">We pair members with mentors who understand the questions that don't always get asked out loud &mdash; about faith and practice, identity in clinical spaces, family, and the shape of a career that holds all of it.</p>
+  <section class="hero">
+    <div class="hero-dots" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-frame" aria-hidden="true">
+      <i class="h" style="top:34px"></i><i class="h" style="bottom:34px"></i>
+      <i class="v" style="left:34px"></i><i class="v" style="right:34px"></i>
+      <i class="x" style="top:34px; left:34px; transform:translate(-50%,-50%)"></i>
+      <i class="x" style="top:34px; right:34px; transform:translate(50%,-50%)"></i>
+      <i class="x" style="bottom:34px; left:34px; transform:translate(-50%,50%)"></i>
+      <i class="x" style="bottom:34px; right:34px; transform:translate(50%,50%)"></i>
+    </div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker tagline" data-reveal style="--d:0ms" id="tagline"><b>Empower</b><i></i><b>Connect</b><i></i><b>Lead</b></p>
+        <h1>
+          <span class="hero-line"><span style="--d:80ms">Rooted in faith,</span></span>
+          <span class="hero-line"><span style="--d:200ms">we <em>connect, uplift,</em></span></span>
+          <span class="hero-line"><span style="--d:320ms"><em>and thrive</em> together.</span></span>
+        </h1>
+        <p class="hero-lede" data-reveal style="--d:520ms">Muslim women physicians and medical students from across Canada, empowering one another through a national mentorship program.</p>
+        <div class="acts" data-reveal style="--d:640ms">
+          <a class="act" href="#join">Join the movement</a>
+          <a class="act-line" href="team.html">Meet the women here <span>&#8599;</span></a>
+        </div>
       </div>
-      <div class="card card--feature reveal">
-        <p class="eyebrow">Our promise</p>
-        <h3>You should never have to navigate this alone.</h3>
-        <p>Whether you're writing your first personal statement, choosing a specialty, or figuring out how to ask for prayer space on a surgical rotation &mdash; someone in this network has been there, and is happy to talk.</p>
-        <div class="btn-row"><a class="btn btn--primary btn--sm" href="team.html">Meet the team</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="what-we-do">
-  <div class="wrap">
-    <div class="section-head section-head--center reveal">
-      <p class="eyebrow">What we do</p>
-      <h2>Four ways we show up for each other</h2>
-    </div>
-    <div class="grid grid--4">
-      <article class="card card--lift reveal">
-        <span class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/><circle cx="10" cy="8" r="3.5"/><path d="M17.5 12.5a3 3 0 1 0-2.2-5.1M20 20v-1.2a3.2 3.2 0 0 0-2.2-3"/></svg>
-        </span>
-        <h3>Mentorship</h3>
-        <p>One-to-one pairings with physicians and senior trainees who've walked the path before you.</p>
-      </article>
-      <article class="card card--lift reveal">
-        <span class="card-icon card-icon--gold">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4m8-4v4M3 10h18"/></svg>
-        </span>
-        <h3>Events</h3>
-        <p>Panels, workshops, and gatherings that bring the community together to learn and connect.</p>
-      </article>
-      <article class="card card--lift reveal">
-        <span class="card-icon card-icon--rose">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 7 3.5C19 16.4 12 21 12 21Z"/></svg>
-        </span>
-        <h3>Local community</h3>
-        <p>University-based chapters offering peer support close to home, on your own campus.</p>
-      </article>
-      <article class="card card--lift reveal">
-        <span class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v17H6.5A2.5 2.5 0 0 0 4 22.5Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v17h5.5a2.5 2.5 0 0 1 2.5 2.5Z"/></svg>
-        </span>
-        <h3>Resources</h3>
-        <p>Community-curated wellness tips, career guides, and practical advice for each training stage.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section--paper" id="mentorship">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Mentorship program</p>
-      <h2>Two ways to take part</h2>
-      <p>Sign-ups are open year-round. Pairings are made with care &mdash; by chapter, specialty interest, and what you're hoping to get out of it.</p>
-    </div>
-    <div class="grid grid--2">
-      <article class="card card--feature reveal">
-        <h3>Become a mentee</h3>
-        <p>For medical students and trainees looking for guidance from someone who understands both the medicine and the rest of it. You'll be matched with a physician or senior resident in your region.</p>
-        <div class="btn-row"><a class="btn btn--primary" href="mentorship.html#mentee">Mentee sign-up</a></div>
-      </article>
-      <article class="card card--feature reveal">
-        <h3>Become a mentor</h3>
-        <p>For physicians and residents. Mentors are paired with one or two mentees and typically connect two to three times a year, virtually or in person &mdash; the level of involvement is entirely up to you.</p>
-        <div class="btn-row"><a class="btn btn--primary" href="mentorship.html#mentor">Mentor sign-up</a></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section--teal" id="chapters">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Local chapters</p>
-      <h2>Find your people on campus</h2>
-      <p>Each chapter is run by student leads who organize local events, connect members with mentors, and keep the community close to home.</p>
-    </div>
-    <div class="chapter-list reveal">
-      <span class="chapter-pill">Schulich (Western)</span>
-      <span class="chapter-pill">McMaster</span>
-      <span class="chapter-pill">Queen's</span>
-      <span class="chapter-pill">University of Toronto</span>
-      <span class="chapter-pill">Toronto Metropolitan</span>
-      <span class="chapter-pill">University of Calgary</span>
-      <span class="chapter-pill">University of Alberta</span>
-    </div>
-    <div class="btn-row mt-lg reveal">
-      <a class="btn btn--gold" href="team.html">Meet your chapter leads</a>
-      <a class="btn btn--ghost" href="contact.html">Start a chapter at your school</a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="events">
-  <div class="wrap wrap--narrow">
-    <div class="section-head reveal">
-      <p class="eyebrow">Upcoming events</p>
-      <h2>What's coming up</h2>
-      <p>Dates are announced on Instagram and in the WhatsApp community.</p>
-    </div>
-    <div class="reveal">
-      <article class="event">
-        <span class="event-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-2a3 3 0 0 1 3-3h3M9 7.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/><path d="M13 21v-2a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v2M19.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/></svg></span>
-        <div>
-          <h3>Specialty panels</h3>
-          <p>Physicians and residents share what their specialty is actually like &mdash; the training, the hours, the parts nobody warns you about.</p>
-        </div>
-      </article>
-      <article class="event">
-        <span class="event-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 1 1-3.2-6.4"/><path d="M12 8v4l2.5 2"/></svg></span>
-        <div>
-          <h3>Faith &amp; medicine conversations</h3>
-          <p>Open discussions on practising medicine as a Muslim woman &mdash; from hijab in the OR to fasting on call to holding onto your values in clinical spaces.</p>
-        </div>
-      </article>
-      <article class="event">
-        <span class="event-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.4 5 5.6.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.6-.8Z"/></svg></span>
-        <div>
-          <h3>Physician spotlights</h3>
-          <p>Longer-form conversations with Muslim women physicians about how they built their careers, and what they'd do differently.</p>
-        </div>
-      </article>
-    </div>
-    <div class="callout mt-lg reveal">
-      <p><strong>Have a cool idea for a panel or workshop?</strong> We'd love to hear from you &mdash; email <a href="mailto:canadianmwim@gmail.com">canadianmwim@gmail.com</a> and tell us what you'd want to attend.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section section--tight">
-  <div class="wrap">
-    <div class="cta-band reveal">
-      <h2>Join the network</h2>
-      <p>Whether you're a first-year student or a staff physician, there's a place for you here. Start with the WhatsApp community &mdash; that's where most of it happens.</p>
-      <div class="btn-row">
-        <a class="btn btn--gold" href="https://chat.whatsapp.com/C3Dkhe9xL327rBzmsGxE6L" rel="noopener" target="_blank">Join the WhatsApp community</a>
-        <a class="btn btn--ghost" href="mentorship.html">Sign up for mentorship</a>
+      <div class="arc" aria-hidden="true">
+        <img class="arc-face" src="assets/img/team/noorq_western.jpg" alt="" width="78" height="78" style="left:92px; top:-28px; width:78px; height:78px; animation-delay:600ms;">
+        <img class="arc-face" src="assets/img/team/taifa_western.jpg" alt="" width="94" height="94" style="left:150px; top:26px; width:94px; height:94px; animation-delay:690ms;">
+        <img class="arc-face" src="assets/img/team/hibaa_queens.jpg" alt="" width="86" height="86" style="left:198px; top:108px; width:86px; height:86px; animation-delay:780ms;">
+        <img class="arc-face" src="assets/img/team/tehrim_uoft.jpg" alt="" width="100" height="100" style="left:208px; top:200px; width:100px; height:100px; animation-delay:870ms;">
+        <img class="arc-face" src="assets/img/team/jenna_alberta.jpg" alt="" width="86" height="86" style="left:198px; top:306px; width:86px; height:86px; animation-delay:960ms;">
+        <img class="arc-face" src="assets/img/team/angela_calgary.jpg" alt="" width="94" height="94" style="left:150px; top:380px; width:94px; height:94px; animation-delay:1050ms;">
+        <img class="arc-face" src="assets/img/team/emaan_mcmaster.jpg" alt="" width="78" height="78" style="left:92px; top:450px; width:78px; height:78px; animation-delay:1140ms;">
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="band" id="what">
+    <div class="wrap">
+      <p class="kicker hairline" data-reveal>What we do</p>
+      <div class="pillars">
+        <div class="pillar" data-reveal style="--d:0ms"><h3>Mentorship</h3><p>Caring mentors ready to support your journey and share what they have learned.</p></div>
+        <div class="pillar" data-reveal style="--d:90ms"><h3>Events</h3><p>Gatherings where Muslim women in medicine share stories and grow side by side.</p></div>
+        <div class="pillar" data-reveal style="--d:180ms"><h3>Local Community</h3><p>Muslimah spaces and friendly faces at your university, with CMWIM leads nearby.</p></div>
+        <div class="pillar" data-reveal style="--d:270ms"><h3>Resources</h3><p>Wisdom from those who came before. Curated reads, wellness tips, practical guides.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-band" data-reveal>
+    <img src="assets/img/events/group-wide.jpg" alt="CMWIM members gathered at a national event." width="1600" height="758">
+    <div class="photo-say"><div class="wrap"><p>A sisterhood that celebrates <em>your identity and ambition.</em></p></div></div>
+  </section>
+
+  <section class="band band-red" id="join">
+    <div class="wrap">
+      <p class="kicker hairline" data-reveal>Mentorship program</p>
+      <h2 data-reveal style="--d:70ms">Ready to mentor or be mentored?</h2>
+      <div class="ways">
+        <div class="way" data-reveal style="--d:150ms">
+          <h3>Become a mentee!</h3>
+          <p>For medical students and trainees who want someone that understands the journey.</p>
+          <a class="act act-cream" href="contact.html">Become a mentee!</a>
+        </div>
+        <div class="way way-solid" data-reveal style="--d:260ms">
+          <h3>Become a mentor!</h3>
+          <p>For physicians at any stage. Mentor someone behind you, and meet the women practising alongside you.</p>
+          <a class="act" href="https://docs.google.com/forms/d/e/1FAIpQLSeAvfYkfAZPBVOXrzFtRsWeFXqOR1fKraphrKBS9Lgjk3bDXQ/viewform" target="_blank" rel="noopener">Become a mentor!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="kicker hairline" data-reveal>Local community</p>
+      <h2 data-reveal style="--d:70ms">Seven schools, one network</h2>
+    </div>
+    <div class="marquee" data-reveal style="--d:150ms" aria-label="Chapters at Schulich, McMaster, Queen's, Toronto, TMU, Calgary and Alberta">
+      <div class="marquee-row" aria-hidden="true"><span>Schulich</span><i></i><span>McMaster</span><i></i><span>Queen&rsquo;s</span><i></i><span>Toronto</span><i></i><span>TMU</span><i></i><span>Calgary</span><i></i><span>Alberta</span><i></i><span>Schulich</span><i></i><span>McMaster</span><i></i><span>Queen&rsquo;s</span><i></i><span>Toronto</span><i></i><span>TMU</span><i></i><span>Calgary</span><i></i><span>Alberta</span><i></i></div>
+    </div>
+  </section>
+
+  <section class="band band-warm">
+    <div class="wrap">
+      <p class="kicker hairline" data-reveal>Events</p>
+      <h2 data-reveal style="--d:70ms">Come together</h2>
+      <div class="gallery">
+        <figure data-reveal style="--d:150ms"><img src="assets/img/events/keynote.jpg" alt="A keynote speaker presenting to CMWIM members."><figcaption>Keynote, national gathering</figcaption></figure>
+        <figure data-reveal style="--d:250ms"><img src="assets/img/events/audience.jpg" alt="CMWIM members listening at a national event."><figcaption>Members at the same event</figcaption></figure>
+      </div>
+      <div style="margin-top:2.4rem; max-width:60rem">
+        <div class="event" data-reveal><div>Panels</div><div><h3>Inspiring Panels</h3><p>Why Medicine, and specialty specific experiences.</p></div></div>
+        <div class="event" data-reveal style="--d:80ms"><div>Conversations</div><div><h3>Faith &amp; Medicine</h3><p>Bridging spiritual values with professional practice.</p></div></div>
+        <div class="event" data-reveal style="--d:160ms"><div>Spotlights</div><div><h3>Specialty Spotlights</h3><p>Physicians from diverse fields.</p></div></div>
+      </div>
+      <p style="margin-top:2rem" data-reveal><a class="act-line" href="events.html">See everything we have run <span>&#8599;</span></a></p>
+    </div>
+  </section>
+
+  <section class="band band-ink">
+    <div class="wrap wrap-tight" style="text-align:center">
+      <p class="kicker hairline" data-reveal>Canadian Muslim Women in Surgery</p>
+      <h2 data-reveal style="--d:70ms; color:var(--cream)">A support framework for Muslim women pursuing surgical careers in Canada.</h2>
+      <p data-reveal style="margin-top:1.8rem; --d:150ms"><a class="act act-cream" href="cmwis.html">About CMWiS</a></p>
+    </div>
+  </section>
+
 </main>
-<footer class="site-footer">
+
+<footer class="site-foot">
   <div class="wrap">
-    <div class="footer-grid">
+    <div class="foot-grid">
       <div>
         <a class="brand" href="index.html">
-          <img src="assets/img/logo.svg" alt="" width="40" height="40">
-          <span class="brand-text">
-            <span class="brand-name">CMWIM</span>
-            <span class="brand-sub">Network</span>
-          </span>
+          <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M24 4.5a13 13 0 1 0 0 23 15 15 0 1 1 0-23Z" fill="#BD3232"/></svg>
+          <b>CMWIM</b>
         </a>
-        <p class="footer-blurb">Canadian Muslim Women in Medicine Network &mdash; a national mentorship community for Muslim women physicians and medical students across Canada.</p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/mwimcanada/" aria-label="Instagram" rel="noopener" target="_blank">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://chat.whatsapp.com/C3Dkhe9xL327rBzmsGxE6L" aria-label="WhatsApp community" rel="noopener" target="_blank">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.8 9.2c.2 1.6 2.4 4.4 4.5 5 .8.2 1.5-.3 1.8-1"/></svg>
-          </a>
-          <a href="mailto:canadianmwim@gmail.com" aria-label="Email us">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
-          </a>
-        </div>
+        <p style="margin-top:1rem; max-width:32ch; color:#9A8C7A">A national community of Muslim women across Canadian medicine.</p>
       </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="mentorship.html">Mentorship</a></li>
-          <li><a href="cmwis.html">CMWiS</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Get involved</h4>
-        <ul>
-          <li><a href="mentorship.html#mentor">Become a mentor</a></li>
-          <li><a href="mentorship.html#mentee">Become a mentee</a></li>
-          <li><a href="index.html#chapters">Find your chapter</a></li>
-          <li><a href="contact.html">Suggest an event</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="mailto:canadianmwim@gmail.com">canadianmwim@gmail.com</a></li>
-          <li><a href="https://www.instagram.com/mwimcanada/" rel="noopener" target="_blank">@mwimcanada</a></li>
-          <li><a href="https://chat.whatsapp.com/C3Dkhe9xL327rBzmsGxE6L" rel="noopener" target="_blank">WhatsApp community</a></li>
-        </ul>
-      </div>
+      <div><h4>Explore</h4><ul><li><a href="#what">What we do</a></li><li><a href="team.html">Our team</a></li><li><a href="events.html">Events</a></li><li><a href="cmwis.html">CMWiS</a></li></ul></div>
+      <div><h4>Join</h4><ul><li><a href="contact.html">As a student</a></li><li><a href="contact.html">As a physician</a></li><li><a href="contact.html">Start a chapter</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="mailto:canadianmwim@gmail.com">canadianmwim@gmail.com</a></li><li><a href="https://www.instagram.com/mwimcanada/" target="_blank" rel="noopener">@mwimcanada</a></li><li><a href="https://chat.whatsapp.com/C3Dkhe9xL327rBzmsGxE6L" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Canadian Muslim Women in Medicine Network</span>
-      <span>Empower &bull; Connect &bull; Lead</span>
-    </div>
+    <div class="foot-end"><span>&copy; 2026 Canadian Muslim Women in Medicine</span><span>Empower &middot; Connect &middot; Lead</span></div>
   </div>
 </footer>
-<script src="assets/js/main.js"></script>
+
+<script>
+(function(){
+  var d=document, root=d.documentElement;
+
+  var t=d.querySelector('.nav-toggle'), n=d.getElementById('nav');
+  if(t&&n){
+    t.addEventListener('click',function(){var o=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',String(!o));n.classList.toggle('open',!o);});
+    n.addEventListener('click',function(e){ if(e.target.closest('a')){n.classList.remove('open');t.setAttribute('aria-expanded','false');} });
+  }
+
+  var head=d.querySelector('.site-head');
+  var bar=d.getElementById('progress');
+  var target=0, current=0, raf=null;
+  function measure(){
+    var max=d.body.scrollHeight-window.innerHeight;
+    target = max>0 ? Math.min(1, window.scrollY/max) : 0;
+    if(head) head.classList.toggle('stuck', window.scrollY>12);
+    if(!raf) raf=requestAnimationFrame(tick);
+  }
+  function tick(){
+    current += (target-current)*0.12;          // spring-ish smoothing, as their useSpring does
+    if(bar) bar.style.transform='scaleX('+current.toFixed(4)+')';
+    if(Math.abs(target-current)>0.0008){ raf=requestAnimationFrame(tick); } else { raf=null; }
+  }
+  measure();
+  window.addEventListener('scroll', measure, {passive:true});
+  window.addEventListener('resize', measure);
+
+  var words=d.querySelectorAll('#tagline b');
+  if(words.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var i=0;
+    words[0].classList.add('lit');
+    setInterval(function(){
+      words[i].classList.remove('lit');
+      i=(i+1)%words.length;
+      words[i].classList.add('lit');
+    }, 2000);
+  } else if (words.length) {
+    words.forEach(function(w){ w.classList.add('lit'); });
+  }
+
+  var els=d.querySelectorAll('[data-reveal]');
+  if(!els.length) return;
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('seen')}); return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('seen'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -6% 0px', threshold:.06});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

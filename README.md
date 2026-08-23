@@ -81,7 +81,6 @@ Check with `dig cmwim.org +noall +answer` before switching off the Google Site.
 
 ## Still to do
 
-- [ ] Confirm the keynote speaker name and date on `events.html`, currently read off a projector slide in a photo
 - [ ] Replace the mentee email sign-up with a Google Form once a destination exists. The mentor button points at the live Google Form.
 - [ ] Add remaining past events
 - [ ] Resolve the Kelin Eator webfont licence

@@ -244,7 +244,7 @@ a.partner-logo:hover { color: var(--red); }
 .site-foot li { margin-bottom: .55rem; }
 .site-foot a { color: var(--cream-warm); text-decoration: none; overflow-wrap: anywhere; }
 .site-foot a:hover { color: #fff; text-decoration: underline; }
-.site-foot .brand img { display: block; width: 165px; height: auto; max-height: 58px; object-fit: contain; }
+.site-foot .brand b { font-family: var(--display); font-size: 1.65rem; font-weight: 400; letter-spacing: .04em; color: var(--cream); }
 .foot-end { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid rgba(254,250,231,.16); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: .85rem; color: var(--ink-soft); }
 
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease), transform .7s var(--ease); }

@@ -247,6 +247,9 @@ a.partner-logo:hover { color: var(--red); }
 .site-foot li { margin-bottom: .55rem; }
 .site-foot a { color: var(--cream-warm); text-decoration: none; overflow-wrap: anywhere; }
 .site-foot a:hover { color: #fff; text-decoration: underline; }
+.social-links a { display: inline-flex; align-items: center; gap: .65rem; }
+.social-links svg { width: 1.15rem; height: 1.15rem; flex: none; color: var(--red-soft); }
+.social-links a:hover svg { color: #fff; }
 .site-foot .brand b { font-family: var(--display); font-size: 1.65rem; font-weight: 400; letter-spacing: .04em; color: var(--cream); }
 .foot-end { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid rgba(254,250,231,.16); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: .85rem; color: var(--ink-soft); }
 

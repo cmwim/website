@@ -134,6 +134,12 @@ img { max-width: 100%; display: block; }
 }
 .act-line:hover { color: var(--red); }
 .acts { display: flex; flex-wrap: wrap; align-items: center; gap: 1.6rem; margin-top: 2.2rem; }
+.section-heading-link { color: inherit; text-decoration: none; }
+.section-heading-link span { display: inline-block; margin-left: .15em; font-family: var(--sans); font-size: .48em; transition: transform .18s var(--ease); }
+.section-heading-link:hover { color: var(--red); }
+.section-heading-link:hover span { transform: translate(.14em, -.14em); }
+.band-red .section-heading-link:hover { color: #fff; }
+.section-route { margin-top: 2rem; }
 
 /* ----------------------------------------------------------- hero ------- */
 

@@ -133,6 +133,8 @@ img { max-width: 100%; display: block; }
   transition: color .18s var(--ease);
 }
 .act-line:hover { color: var(--red); }
+.band-red .act-line { color: var(--cream); border-bottom-color: var(--red-soft); }
+.band-red .act-line:hover { color: #fff; }
 .acts { display: flex; flex-wrap: wrap; align-items: center; gap: 1.6rem; margin-top: 2.2rem; }
 .section-heading-link:link,
 .section-heading-link:visited,

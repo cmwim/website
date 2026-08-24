@@ -540,6 +540,7 @@ a.pillar b { margin-top: 1rem; color: var(--red); font-size: .85rem; }
 .resource-feature h2 { margin-top: .7rem; font-size: clamp(1.65rem, 3vw, 2.45rem); }
 .resource-feature p { color: var(--ink-mid); margin: 0; }
 .resource-feature > b { flex: none; color: var(--red); font-size: .9rem; }
+.resource-feature + .resource-feature { margin-top: 1.25rem; }
 @media (max-width: 640px) { .resource-feature { align-items: flex-start; flex-direction: column; } }
 
 /* ====================================================== mentorship ===== */

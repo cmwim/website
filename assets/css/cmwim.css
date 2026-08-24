@@ -181,12 +181,12 @@ img { max-width: 100%; display: block; }
 .partner-row { display: flex; width: max-content; animation: partner-scroll 28s linear infinite; }
 .partner-marquee:hover .partner-row { animation-play-state: paused; }
 .partner-logo {
-  width: clamp(15rem, 24vw, 20rem); min-height: 10rem; padding: 1.6rem 2rem;
+  width: clamp(17rem, 26vw, 22rem); min-height: 11.5rem; padding: 1.8rem 2.25rem;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .65rem;
   color: var(--ink); text-align: center; text-decoration: none; border-right: 1px solid var(--line);
 }
-.partner-logo img { width: 100%; max-width: 11rem; height: 6rem; object-fit: contain; mix-blend-mode: multiply; }
-.partner-logo img.partner-logo-square { width: 6.5rem; height: 6.5rem; }
+.partner-logo img { width: 100%; max-width: 12.5rem; height: 7rem; object-fit: contain; mix-blend-mode: multiply; }
+.partner-logo img.partner-logo-square { width: 7.5rem; height: 7.5rem; }
 .partner-logo strong { font-family: var(--body); font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1; letter-spacing: -.04em; }
 .partner-logo strong i { display: block; margin-top: .45rem; font-size: .35em; font-style: normal; letter-spacing: .45em; text-transform: uppercase; }
 .partner-logo span { max-width: 24ch; color: var(--ink-soft); font-size: .76rem; line-height: 1.35; text-transform: uppercase; letter-spacing: .08em; }

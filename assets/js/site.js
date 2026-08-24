@@ -66,6 +66,12 @@
     var closeBtn = inner.querySelector('.bio-close');
     var open = null;
 
+    function decodeHtml(value) {
+      var decoder = d.createElement('textarea');
+      decoder.innerHTML = value;
+      return decoder.value;
+    }
+
     function shut() {
       if (!open) return;
       open.setAttribute('aria-expanded', 'false');
@@ -85,8 +91,8 @@
         open = btn;
         btn.setAttribute('aria-expanded', 'true');
         h3.textContent = btn.dataset.name;
-        role.innerHTML = btn.dataset.role + ' · ' + btn.dataset.meta;
-        p.innerHTML = btn.dataset.bio;
+        role.innerHTML = decodeHtml(btn.dataset.role + ' · ' + btn.dataset.meta);
+        p.innerHTML = decodeHtml(btn.dataset.bio);
         panel.hidden = false;
         requestAnimationFrame(function () { panel.classList.add('open'); });
       });

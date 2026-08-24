@@ -166,9 +166,16 @@ img { max-width: 100%; display: block; }
 .arc-crescent { position: absolute; inset: 0; z-index: -1; }
 
 @media (max-width: 940px) {
-  .hero-grid { grid-template-columns: 1fr; }
-  .arc { height: 300px; order: -1; }
-  .arc-face { transform: scale(.62); transform-origin: 40% 50%; }
+  .hero-grid { display: flex; flex-direction: column; align-items: stretch; }
+  .arc {
+    width: 100%; height: auto; margin-top: 1rem;
+    display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: .65rem;
+  }
+  .arc-face {
+    position: static; justify-self: center;
+    width: clamp(68px, 9vw, 92px) !important; height: clamp(68px, 9vw, 92px) !important;
+    transform: none; transform-origin: center;
+  }
 }
 
 /* ---------------------------------------------------------- bands ------- */
@@ -256,13 +263,50 @@ a.partner-logo:hover { color: var(--red); }
 .site-foot h4 { font-family: var(--body); font-size: .76rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-soft); margin: 0 0 1rem; }
 .site-foot ul { list-style: none; margin: 0; padding: 0; }
 .site-foot li { margin-bottom: .55rem; }
-.site-foot a { color: var(--cream-warm); text-decoration: none; overflow-wrap: anywhere; }
+.site-foot a { color: var(--cream-warm); text-decoration: none; overflow-wrap: break-word; word-break: normal; }
 .site-foot a:hover { color: #fff; text-decoration: underline; }
 .social-links a { display: inline-flex; align-items: center; gap: .65rem; }
 .social-links svg { width: 1.15rem; height: 1.15rem; flex: none; color: var(--red-soft); }
 .social-links a:hover svg { color: #fff; }
 .site-foot .brand b { font-family: var(--display); font-size: 1.65rem; font-weight: 400; letter-spacing: .04em; color: var(--cream); }
 .foot-end { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid rgba(254,250,231,.16); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: .85rem; color: var(--ink-soft); }
+
+@media (max-width: 760px) {
+  .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
+  .foot-grid > :first-child, .foot-grid > :last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 1rem; line-height: 1.62; }
+  .wrap { padding-inline: 1.15rem; }
+  .head-in { min-height: 62px; }
+  .site-head .brand img { width: 104px; max-height: 37px; }
+  .nav-toggle { width: 44px; height: 44px; }
+  .nav { max-height: calc(100dvh - 62px); overflow-y: auto; }
+
+  .hero { padding-block: 2.5rem 3rem; }
+  .hero-grid { gap: 1.75rem; }
+  .hero h1 { font-size: clamp(2.35rem, 11vw, 3rem); }
+  .hero-lede { margin-top: 1rem; }
+  .hero .acts { flex-direction: column; align-items: stretch; gap: .75rem; margin-top: 1.6rem; }
+  .hero .acts .act, .hero .acts .act-line { width: 100%; text-align: center; }
+  .arc { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem .5rem; margin-top: .25rem; }
+  .arc-face { position: static; width: min(20vw, 78px) !important; height: min(20vw, 78px) !important; }
+
+  .band { padding-block: 3rem; }
+  .hairline { gap: .7rem; }
+  .hairline::before { width: 1.25rem; }
+  .quote { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ways { margin-top: 1.75rem; }
+  .way { padding: 1.4rem; }
+  .bio-in { flex-direction: column; }
+
+  .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .foot-grid > :first-child, .foot-grid > :last-child { grid-column: auto; }
+  .site-foot { padding-top: 2.75rem; }
+  .foot-end { margin-top: 2.25rem; }
+  .social-links a { max-width: 100%; }
+}
 
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.on { opacity: 1; transform: none; }
@@ -587,3 +631,10 @@ a.pillar b { margin-top: 1rem; color: var(--red); font-size: .85rem; }
 .reach b { display: block; font-size: 1.05rem; font-weight: 500; }
 .reach span { font-size: .92rem; color: var(--ink-soft); }
 .reach em { margin-left: auto; font-style: normal; color: var(--red); }
+
+@media (max-width: 640px) {
+  .bio-in { flex-direction: column; }
+  .reach { align-items: flex-start; }
+  .reach > span { min-width: 0; overflow-wrap: anywhere; }
+  .reach em { margin-left: 0; }
+}

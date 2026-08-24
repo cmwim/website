@@ -524,22 +524,27 @@ a.pillar b { margin-top: 1rem; color: var(--red); font-size: .85rem; }
 .page-head h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 18ch; }
 .page-head p { color: var(--ink-mid); max-width: 52ch; margin-top: .8rem; }
 
-.team-directory { padding-block: 1.4rem; background: var(--ink); }
+.team-directory { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.team-directory-label {
+  margin-bottom: .8rem; color: var(--red); font-size: .76rem; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase;
+}
 .chapter-jumps { display: flex; flex-wrap: wrap; gap: .65rem; }
 .chapter-jumps a {
   display: inline-flex; align-items: center; gap: .5rem; padding: .58rem 1rem;
-  border: 1px solid rgba(254,250,231,.16); border-radius: .7rem;
-  background: rgba(254,250,231,.07); color: var(--cream-warm);
+  border: 1px solid var(--line); border-radius: .7rem;
+  background: var(--cream-deep); color: var(--ink-mid);
   font-size: .86rem; line-height: 1.2; text-decoration: none;
   transition: background-color .18s var(--ease), border-color .18s var(--ease), transform .18s var(--ease);
 }
-.chapter-jumps a span { width: .38rem; height: .38rem; flex: none; border-radius: 50%; background: var(--red-soft); }
-.chapter-jumps a:hover { background: rgba(254,250,231,.14); border-color: rgba(254,250,231,.32); transform: translateY(-1px); }
+.chapter-jumps a span { width: .38rem; height: .38rem; flex: none; border-radius: 50%; background: var(--red); }
+.chapter-jumps a:hover { background: var(--cream-warm); border-color: var(--red-soft); color: var(--ink); transform: translateY(-1px); }
 .chapter-jumps a.chapter-start { background: var(--red); border-color: var(--red); color: var(--cream); font-weight: 700; }
 .chapter-jumps a.chapter-start span { width: auto; height: auto; border-radius: 0; background: none; transition: transform .18s var(--ease); }
 .chapter-jumps a.chapter-start:hover { background: var(--red-dark); border-color: var(--red-dark); }
 .chapter-jumps a.chapter-start:hover span { transform: translate(3px, -2px); }
-.team-directory-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+.team-directory-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; margin-top: 1.25rem; }
+.team-directory-actions > span { color: var(--ink-mid); font-size: .95rem; }
 .team-directory-actions .act { text-align: center; }
 
 .roster { padding-block: clamp(2rem, 4vw, 3rem); scroll-margin-top: 5.5rem; }
@@ -568,7 +573,9 @@ a.pillar b { margin-top: 1rem; color: var(--red); font-size: .85rem; }
 @media (max-width: 500px) {
   .chapter-jumps { gap: .5rem; }
   .chapter-jumps a { flex: 1 1 calc(50% - .5rem); padding: .55rem .7rem; }
+  .chapter-jumps a.chapter-start { flex-basis: 100%; }
   .team-directory-actions { flex-direction: column; }
+  .team-directory-actions > span { width: 100%; }
   .team-directory-actions .act { width: 100%; }
   .faces { gap: 1.5rem .75rem; justify-content: space-between; }
   .face { width: calc(50% - .5rem); }

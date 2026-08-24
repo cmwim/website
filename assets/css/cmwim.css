@@ -524,7 +524,21 @@ a.pillar b { margin-top: 1rem; color: var(--red); font-size: .85rem; }
 .page-head h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 18ch; }
 .page-head p { color: var(--ink-mid); max-width: 52ch; margin-top: .8rem; }
 
-.roster { padding-block: clamp(2rem, 4vw, 3rem); }
+.team-directory { padding-block: 1.4rem; background: var(--ink); }
+.chapter-jumps { display: flex; flex-wrap: wrap; gap: .65rem; }
+.chapter-jumps a {
+  display: inline-flex; align-items: center; gap: .5rem; padding: .48rem .85rem;
+  border: 1px solid rgba(254,250,231,.16); border-radius: 999px;
+  background: rgba(254,250,231,.07); color: var(--cream-warm);
+  font-size: .86rem; line-height: 1.2; text-decoration: none;
+  transition: background-color .18s var(--ease), border-color .18s var(--ease), transform .18s var(--ease);
+}
+.chapter-jumps a span { width: .38rem; height: .38rem; flex: none; border-radius: 50%; background: var(--red-soft); }
+.chapter-jumps a:hover { background: rgba(254,250,231,.14); border-color: rgba(254,250,231,.32); transform: translateY(-1px); }
+.team-directory-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+.team-directory-actions .act { text-align: center; }
+
+.roster { padding-block: clamp(2rem, 4vw, 3rem); scroll-margin-top: 5.5rem; }
 .roster + .roster { padding-top: 0; }
 .roster-label { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.6rem; }
 .roster-label span { font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
@@ -548,6 +562,10 @@ a.pillar b { margin-top: 1rem; color: var(--red); font-size: .85rem; }
 .face b { font-weight: 500; font-size: .9rem; line-height: 1.25; text-align: center; }
 .face i { font-style: normal; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
 @media (max-width: 500px) {
+  .chapter-jumps { gap: .5rem; }
+  .chapter-jumps a { flex: 1 1 calc(50% - .5rem); padding: .55rem .7rem; }
+  .team-directory-actions { flex-direction: column; }
+  .team-directory-actions .act { width: 100%; }
   .faces { gap: 1.5rem .75rem; justify-content: space-between; }
   .face { width: calc(50% - .5rem); }
   .face img { width: 142px; height: 142px; }

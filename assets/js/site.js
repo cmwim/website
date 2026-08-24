@@ -85,8 +85,8 @@
         open = btn;
         btn.setAttribute('aria-expanded', 'true');
         h3.textContent = btn.dataset.name;
-        role.textContent = btn.dataset.role + ' · ' + btn.dataset.meta;
-        p.textContent = btn.dataset.bio;
+        role.innerHTML = btn.dataset.role + ' · ' + btn.dataset.meta;
+        p.innerHTML = btn.dataset.bio;
         panel.hidden = false;
         requestAnimationFrame(function () { panel.classList.add('open'); });
       });

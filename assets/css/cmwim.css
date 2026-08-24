@@ -466,14 +466,14 @@ a.partner-logo:hover { color: var(--red); }
 .roster-label span { font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
 .roster-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
-.faces { display: flex; flex-wrap: wrap; gap: clamp(1.25rem, 3vw, 2.25rem); }
+.faces { display: flex; flex-wrap: wrap; gap: clamp(1.75rem, 3.5vw, 3rem); }
 .face {
   appearance: none; background: none; border: 0; padding: 0; cursor: pointer;
   display: flex; flex-direction: column; align-items: center; gap: .7rem;
-  width: 9rem; font-family: inherit; color: inherit;
+  width: 12rem; font-family: inherit; color: inherit;
 }
 .face img {
-  width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: 50% 38%;
+  width: 164px; height: 164px; border-radius: 50%; object-fit: cover; object-position: 50% 38%;
   box-shadow: 0 0 0 4px var(--cream), 0 0 0 5.5px var(--line);
   transition: box-shadow .28s var(--wm-ease), transform .28s var(--wm-ease);
 }
@@ -483,6 +483,11 @@ a.partner-logo:hover { color: var(--red); }
 .face[aria-expanded="true"] img { box-shadow: 0 0 0 4px var(--cream), 0 0 0 6px var(--red); transform: scale(1.05); }
 .face b { font-weight: 500; font-size: .9rem; line-height: 1.25; text-align: center; }
 .face i { font-style: normal; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+@media (max-width: 500px) {
+  .faces { gap: 1.5rem .75rem; justify-content: space-between; }
+  .face { width: calc(50% - .5rem); }
+  .face img { width: 142px; height: 142px; }
+}
 
 .bio {
   overflow: hidden; max-height: 0;

@@ -1,6 +1,6 @@
 # cmwim.org
 
-Static site for **CMWIM**, the Canadian Muslim Women in Medicine Network.
+Static site for **CMWIM**, the Canadian Muslim Women in Medicine community.
 Plain HTML and CSS, no build step. GitHub Pages serves these files as they are.
 
 ## Pages

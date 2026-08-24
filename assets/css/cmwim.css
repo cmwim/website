@@ -187,6 +187,7 @@ img { max-width: 100%; display: block; }
 }
 .partner-logo img { width: 100%; max-width: 12.5rem; height: 7rem; object-fit: contain; mix-blend-mode: multiply; }
 .partner-logo img.partner-logo-square { width: 7.5rem; height: 7.5rem; }
+.partner-logo img.partner-logo-tall { width: 7.5rem; height: 8rem; }
 .partner-logo strong { font-family: var(--body); font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1; letter-spacing: -.04em; }
 .partner-logo strong i { display: block; margin-top: .45rem; font-size: .35em; font-style: normal; letter-spacing: .45em; text-transform: uppercase; }
 .partner-logo span { max-width: 24ch; color: var(--ink-soft); font-size: .76rem; line-height: 1.35; text-transform: uppercase; letter-spacing: .08em; }

@@ -97,6 +97,16 @@
     });
   });
 
+  /* accessible content accordions --------------------------------------- */
+  Array.prototype.forEach.call(d.querySelectorAll('.accordion-item'), function (item) {
+    var trigger = item.querySelector('.accordion-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', function () {
+      var open = item.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(open));
+    });
+  });
+
   /* reveal on scroll ---------------------------------------------------- */
   var els = d.querySelectorAll('[data-reveal]');
   if (!els.length) return;
